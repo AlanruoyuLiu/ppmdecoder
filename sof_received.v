@@ -1,11 +1,13 @@
 module sof_received (
-    Din, clk16, rst_n, sof_rcv_out
+    Din, clk16, rst_n, sof_rcv_out, eof_rcv_in, cnt_sof
 );
 
-    input Din, clk16, rst_n;
+    input Din, clk16, rst_n, eof_rcv_in;
     output sof_rcv_out;
+    output [2:0] cnt_sof;
 
-    wire sof_rcv_out;
+    reg sof_rcv_out;
+    reg q0; // to delay a clock for output at 8th clock.
 
     reg [2:0] cnt_sof;
 
@@ -17,12 +19,11 @@ module sof_received (
 
     reg start; //start to count.
 
-
     always @(posedge clk16 or negedge rst_n) begin
         if (!rst_n) begin
             start <= 1'b0;
-        end else if (!Din) begin
-            start <= 1'b1;
+        end else if (!Din || eof_rcv_in) begin
+            start <= !eof_rcv_in;
         end
     end
 
@@ -33,7 +34,9 @@ module sof_received (
            cnt_sof <= 3'b000;
        end else if (start) begin // only when the Din is low level, then start to count.
            cnt_sof <= cnt_sof + 3'b001;
-       end 
+       end else if (eof_rcv_in) begin
+           cnt_sof <= 3'b000;
+       end
     end
 /*
 //这种风格的代码是无法正常工作的，原因在于：
@@ -76,8 +79,16 @@ module sof_received (
     end
 
     // This is a combinational circuit, so sof_received will be 1, when cnt_sof is 5.
-    assign sof_rcv_out = (shift_sof[4]) && (fifthislow);
+//    assign sof_rcv_out = (shift_sof[4]) && (fifthislow);
 
-
+    always @(posedge clk16 or negedge rst_n) begin
+        if (!rst_n) begin
+            sof_rcv_out <= 1'b0;
+            q0 <= 1'b0;
+        end else begin
+            q0 <= (shift_sof[4]) && (fifthislow);
+            sof_rcv_out <= q0;
+        end
+    end
     
 endmodule

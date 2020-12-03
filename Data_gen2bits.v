@@ -1,7 +1,7 @@
 module Data_gen2bits (
-    clk16, rst_n, Din, state, data_3bits_out, finish2bits_out
+    clk16, rst_n, Din, state_in, data_3bits_out, finish2bits_out
 );
-    input clk16, rst_n, Din, state;
+    input clk16, rst_n, Din, state_in;
     output [2:0] data_3bits_out;
     output finish2bits_out;
 
@@ -21,7 +21,7 @@ module Data_gen2bits (
     always @(posedge clk16 or negedge rst_n) begin
         if (!rst_n) begin
             cnt_2bits <= 3'b000;
-        end else if (state) begin
+        end else if (state_in) begin
             cnt_2bits <= cnt_2bits + 3'b001;
         end
     end
@@ -34,9 +34,9 @@ module Data_gen2bits (
        end 
     end  
 
-    assign data00 = Din_reg && (cnt_2bits == 3'b010); // because cnt_2bits is 1, when state is high.
-    assign data01 = Din_reg && (cnt_2bits == 3'b100);
-    assign data10 = Din_reg && (cnt_2bits == 3'b110);
+    assign data00 = Din_reg && (cnt_2bits == 3'b001); // because cnt_2bits is 1, when state_in is high.
+    assign data01 = Din_reg && (cnt_2bits == 3'b011);
+    assign data10 = Din_reg && (cnt_2bits == 3'b101);
 
     always @(posedge clk16 or negedge rst_n) begin
         if (!rst_n) begin
@@ -62,9 +62,9 @@ module Data_gen2bits (
         end
     end
 
-    assign data_3bits_out = (shift_00[5] == 1'b1)? 3'b000 : (shift_01[3] == 1'b1)? 3'b001 : (shift_10[1] == 1'b1)? 3'b010 : (Din_reg && (cnt_2bits == 3'b000)) ? 3'b011 : 3'b100;
+    assign data_3bits_out = (shift_00[5] == 1'b1)? 3'b000 : (shift_01[3] == 1'b1)? 3'b001 : (shift_10[1] == 1'b1)? 3'b010 : (Din_reg && (cnt_2bits == 3'b111)) ? 3'b011 : 3'b100;
 
 
-    assign finish2bits_out = (shift_00[5] == 1'b1) || (shift_01[3] == 1'b1) || (shift_10[1] == 1'b1) || (Din_reg && (cnt_2bits == 3'b000));
+    assign finish2bits_out = (shift_00[5] == 1'b1) || (shift_01[3] == 1'b1) || (shift_10[1] == 1'b1) || (Din_reg && (cnt_2bits == 3'b111));
 
 endmodule

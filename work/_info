@@ -30,13 +30,13 @@ Z5 !s108 1606871887.000000
 Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 Z7 tCvgOpt 0
 vclk16
-!s110 1606871278
+Z8 !s110 1606987388
 !i10b 1
 !s100 >Dh75_nmaNezRD59E3T540
 IZBDC@;iF=G?MPJCOmCSLb0
 R2
 R3
-w1606871266
+w1606871363
 8D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/clk16.v
 FD:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/clk16.v
 L0 1
@@ -44,20 +44,41 @@ R4
 r1
 !s85 0
 31
-!s108 1606871278.000000
+Z9 !s108 1606987388.000000
 !s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/clk16.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/clk16.v|
 !i113 0
 R6
 R7
-vdata_byte
-Z8 !s110 1606917771
+vcontrol_unit
+R8
 !i10b 1
-!s100 i3e;>=??FZ9Tb9DRQBmja3
-IfnedTD:A^m@2Vn`7O:LWm0
+!s100 fURb8G@YCRW<2>?d0z2nB2
+IcGjIkEKl9Znd;=z?8SRn50
 R2
 R3
-w1606917765
+w1606961911
+8D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/control_unit.v
+FD:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/control_unit.v
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/control_unit.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/control_unit.v|
+!i113 0
+R6
+R7
+vdata_byte
+R8
+!i10b 1
+!s100 7;]5FEm3ozfT15UTonQhQ0
+I9^YD0YR>a@`fdJ9?dW6X63
+R2
+R3
+w1606964839
 8D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/data_byte.v
 FD:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/data_byte.v
 L0 1
@@ -65,20 +86,62 @@ R4
 r1
 !s85 0
 31
-Z9 !s108 1606917771.000000
+R9
 !s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/data_byte.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/data_byte.v|
 !i113 0
 R6
 R7
-vData_gen2bits
-Z10 !s110 1606915506
+vdata_den
+R8
 !i10b 1
-!s100 o>2K<f;k3jFzX>BfM0zTW1
-I3W`Q3FhKZ0EoV8dz63kQH1
+!s100 EIRNY4X4UCkZE37?X@9F72
+I?`^33Md?NTj^;a9Ho9@2R2
 R2
 R3
-w1606915466
+w1606918259
+8D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/data_den.v
+FD:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/data_den.v
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/data_den.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/data_den.v|
+!i113 0
+R6
+R7
+vdata_fen
+R8
+!i10b 1
+!s100 kVOFTl63Z>0;]N=mZ_5DJ3
+IW]=bLNjzl2PF9;?=jC:fn3
+R2
+R3
+w1606919481
+8D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/data_fen.v
+FD:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/data_fen.v
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/data_fen.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/data_fen.v|
+!i113 0
+R6
+R7
+vData_gen2bits
+R8
+!i10b 1
+!s100 LS:`n[LQ8W7UV@1o>7WY@0
+IXSD<eNLFHFbQV_NSVaUZV2
+R2
+R3
+w1606961567
 8D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/Data_gen2bits.v
 FD:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/Data_gen2bits.v
 L0 1
@@ -86,7 +149,7 @@ R4
 r1
 !s85 0
 31
-Z11 !s108 1606915506.000000
+R9
 !s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/Data_gen2bits.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/Data_gen2bits.v|
 !i113 0
@@ -94,13 +157,13 @@ R6
 R7
 n@data_gen2bits
 veof_received
-Z12 !s110 1606911172
+R8
 !i10b 1
-!s100 ;M>k<HOm7B5Ka3>a5HjcG0
-I9INeXe`QUiN2k:UO?DS>d3
+!s100 2foQJ9`5>e>=bo;KY[LKU2
+I8IQzYS9QT4cN9_UoDVm5?3
 R2
 R3
-w1606911165
+w1606987327
 8D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/eof_received.v
 FD:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/eof_received.v
 L0 1
@@ -108,20 +171,41 @@ R4
 r1
 !s85 0
 31
-Z13 !s108 1606911172.000000
+R9
 !s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/eof_received.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/eof_received.v|
 !i113 0
 R6
 R7
-vsof_received
-Z14 !s110 1606899501
+vppm_decoder
+R8
 !i10b 1
-!s100 2b_M:b6HjmSd[;c[KEAm@2
-IX6QN]C^I:Mj`^<ago40IQ3
+!s100 hLIXdPlXO2b8NWP;1ROl03
+ILH2F0o46eSjZDf`APYMCd3
 R2
 R3
-w1606899495
+w1606987344
+8D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/ppm_decoder.v
+FD:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/ppm_decoder.v
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/ppm_decoder.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/ppm_decoder.v|
+!i113 0
+R6
+R7
+vsof_received
+R8
+!i10b 1
+!s100 9^Z2kFAWCER:_7nabz5aP3
+IgGzmXkc1=jfzGbbVb^dJ_1
+R2
+R3
+w1606987187
 8D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/sof_received.v
 FD:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/sof_received.v
 L0 1
@@ -129,7 +213,7 @@ R4
 r1
 !s85 0
 31
-Z15 !s108 1606899501.000000
+R9
 !s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/sof_received.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/sof_received.v|
 !i113 0
@@ -143,16 +227,16 @@ IcFVz=NY3k<Io<Nb]7kVCN3
 R2
 R3
 w1606871778
-Z16 8D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_clk128.v
-Z17 FD:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_clk128.v
+Z10 8D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_clk128.v
+Z11 FD:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_clk128.v
 L0 2
 R4
 r1
 !s85 0
 31
 R5
-Z18 !s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_clk128.v|
-Z19 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_clk128.v|
+Z12 !s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_clk128.v|
+Z13 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_clk128.v|
 !i113 0
 R6
 R7
@@ -160,10 +244,10 @@ Ttb_clk128_opt
 !s110 1606871893
 VC][Mm59fXz=L5T8RBaJcT1
 04 9 4 work tb_clk128 fast 0
-Z20 o+acc
+Z14 o+acc
 R7
 ntb_clk128_opt
-Z21 OL;O;10.5;63
+Z15 OL;O;10.5;63
 R0
 vtb_clk16
 !s110 1606871719
@@ -173,16 +257,16 @@ I]lV65n0]cOJJ]F5`6obI?1
 R2
 R3
 w1606871496
-R16
-R17
+R10
+R11
 L0 2
 R4
 r1
 !s85 0
 31
 !s108 1606871719.000000
-R18
-R19
+R12
+R13
 !i113 0
 R6
 R7
@@ -190,13 +274,13 @@ Ttb_clk16_opt
 !s110 1606871283
 VUdf>X]z5;78<MZTJFf[Dg0
 04 8 4 work tb_clk16 fast 0
-R20
+R14
 R7
 ntb_clk16_opt
-R21
+R15
 R0
 vtb_databyte
-R8
+Z16 !s110 1606917771
 !i10b 1
 !s100 F<b192DB:YcEGV_=K<UJ=0
 IaiMWI>>T[U9boZUlb]lQJ1
@@ -210,22 +294,23 @@ R4
 r1
 !s85 0
 31
-R9
+!s108 1606917771.000000
 !s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_databyte.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_databyte.v|
 !i113 0
 R6
 R7
 Ttb_databyte_opt
-R8
+R16
 V_SC<:ZR3<7QTP;gJ1YmGl3
 04 11 4 work tb_databyte fast 0
-R20
+R14
 R7
 ntb_databyte_opt
-R21
+R15
+R0
 vtb_Datagen2bits
-R10
+Z17 !s110 1606915506
 !i10b 1
 !s100 c?<ZcL=^YR`ID;3RDnc2?1
 ICXg[3NhnEUUTSVfEXM@V@0
@@ -239,7 +324,7 @@ R4
 r1
 !s85 0
 31
-R11
+!s108 1606915506.000000
 !s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_Datagen2bits.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_Datagen2bits.v|
 !i113 0
@@ -247,16 +332,46 @@ R6
 R7
 ntb_@datagen2bits
 Ttb_Datagen2bits_opt
-R10
+R17
 Vk;G3eI?L81`Q=]I9jjj@K2
 04 15 4 work tb_Datagen2bits fast 0
-R20
+R14
 R7
 ntb_@datagen2bits_opt
-R21
+R15
 R0
+vtb_decoderPPM
+R8
+!i10b 1
+!s100 imzOW7hbc?VF9N@7STKVO0
+I52_eJQWD0Sak41eMc>EA12
+R2
+R3
+w1606962492
+8D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_decoderPPM.v
+FD:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_decoderPPM.v
+L0 3
+R4
+r1
+!s85 0
+31
+R9
+!s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_decoderPPM.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_decoderPPM.v|
+!i113 0
+R6
+R7
+ntb_decoder@p@p@m
+Ttb_decoderPPM_opt
+R8
+VmWDE3R2Aib5>Wa6LUi7gK2
+04 13 4 work tb_decoderPPM fast 0
+R14
+R7
+ntb_decoder@p@p@m_opt
+R15
 vtb_eofreceived
-R12
+Z18 !s110 1606911172
 !i10b 1
 !s100 d1U7Vch]RK0<A`J`3V`ZO1
 IiVQ1XfTG7g29JY]ziimS82
@@ -270,23 +385,23 @@ R4
 r1
 !s85 0
 31
-R13
+!s108 1606911172.000000
 !s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_eofreceived.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_eofreceived.v|
 !i113 0
 R6
 R7
 Ttb_eofreceived_opt
-R12
+R18
 VeT02<BCi^Xz`o1?eF>S5A1
 04 14 4 work tb_eofreceived fast 0
-R20
+R14
 R7
 ntb_eofreceived_opt
-R21
+R15
 R0
 vtb_sofreceived
-R14
+Z19 !s110 1606899501
 !i10b 1
 !s100 ^T4iW_NZbn>o03^97eTY80
 IP;<9`@zz1za4SeQmQT>GR3
@@ -300,18 +415,18 @@ R4
 r1
 !s85 0
 31
-R15
+!s108 1606899501.000000
 !s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_sofreceived.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_sofreceived.v|
 !i113 0
 R6
 R7
 Ttb_sofreceived_opt
-R14
+R19
 VO530lMRTVd38=6Bi4OHA43
 04 14 4 work tb_sofreceived fast 0
-R20
+R14
 R7
 ntb_sofreceived_opt
-R21
+R15
 R0

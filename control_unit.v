@@ -46,9 +46,9 @@ module control_unit (
     
     always @(onebyte_in) begin
         case (state)
-           sof_invalid : Dout = 1'd0;
+           sof_invalid : Dout = 8'd0;
            sof_received : Dout = dout_data;
-           default: Dout = 1'bx;
+           default: Dout = 8'bx;
         endcase        
     end
     
