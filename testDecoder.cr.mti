@@ -1,16 +1,23 @@
-D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/data_byte.v {1 {vlog -work work -vopt -stats=none D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/data_byte.v
+D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/clk16.v {1 {vlog -work work -vopt -stats=none D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/clk16.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module clk16
+
+Top level modules:
+	clk16
+
+} {} {}} D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/data_byte.v {1 {vlog -work work -vopt -stats=none D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/data_byte.v
 Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
 -- Compiling module data_byte
 
 Top level modules:
 	data_byte
 
-} {} {}} D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/clk16.v {1 {vlog -work work -vopt -stats=none D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/clk16.v
+} {} {}} D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/ppm_decoder.v {1 {vlog -work work -vopt -stats=none D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/ppm_decoder.v
 Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
--- Compiling module clk16
+-- Compiling module ppm_decoder
 
 Top level modules:
-	clk16
+	ppm_decoder
 
 } {} {}} D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/data_fen.v {1 {vlog -work work -vopt -stats=none D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/data_fen.v
 Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
