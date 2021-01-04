@@ -1,8 +1,8 @@
 module sof_received (
-    Din, clk16, rst_n, sof_rcv_out, eof_rcv_in, cnt_sof
+    Din, clk16, rst_n, sof_rcv_out, eof_rcv_in, cnt_sof, clk
 );
 
-    input Din, clk16, rst_n, eof_rcv_in;
+    input Din, clk16, rst_n, eof_rcv_in, clk;
     output sof_rcv_out;
     output [2:0] cnt_sof;
 
@@ -19,22 +19,22 @@ module sof_received (
 
     reg start; //start to count.
 
-    always @(posedge clk16 or negedge rst_n) begin
+    always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             start <= 1'b0;
-        end else if (!Din || eof_rcv_in) begin
+        end else if ((!Din || eof_rcv_in) && clk16) begin
             start <= !eof_rcv_in;
         end
     end
 
 
 
-    always @(posedge clk16 or negedge rst_n) begin
+    always @(posedge clk or negedge rst_n) begin
        if (!rst_n) begin
            cnt_sof <= 3'b000;
-       end else if (start) begin // only when the Din is low level, then start to count.
+       end else if (start && clk16) begin // only when the Din is low level, then start to count.
            cnt_sof <= cnt_sof + 3'b001;
-       end else if (eof_rcv_in) begin
+       end else if (eof_rcv_in && clk16) begin
            cnt_sof <= 3'b000;
        end
     end
@@ -57,10 +57,10 @@ module sof_received (
        end 
     end
 */
-    always @(posedge clk16 or negedge rst_n) begin
+    always @(posedge clk or negedge rst_n) begin
        if (!rst_n) begin
            Din_reg <= 1'b0;
-       end else begin
+       end else if (clk16) begin
            Din_reg <= (!Din); //将输入对齐时钟，哪怕是延迟了一拍也值得
        end 
     end
@@ -70,10 +70,10 @@ module sof_received (
 
 
     //shift registers to delay signal - zeroislow
-    always @(posedge clk16 or negedge rst_n) begin
+    always @(posedge clk or negedge rst_n) begin
        if (!rst_n) begin
            shift_sof <= 5'd0;
-       end else begin
+       end else if (clk16) begin
            shift_sof <= {shift_sof[3:0], zeroislow};
        end 
     end
@@ -81,11 +81,11 @@ module sof_received (
     // This is a combinational circuit, so sof_received will be 1, when cnt_sof is 5.
 //    assign sof_rcv_out = (shift_sof[4]) && (fifthislow);
 
-    always @(posedge clk16 or negedge rst_n) begin
+    always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             sof_rcv_out <= 1'b0;
             q0 <= 1'b0;
-        end else begin
+        end else if (clk16) begin
             q0 <= (shift_sof[4]) && (fifthislow);
             sof_rcv_out <= q0;
         end

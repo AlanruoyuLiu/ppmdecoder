@@ -30,7 +30,7 @@ Z5 !s108 1606871887.000000
 Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 Z7 tCvgOpt 0
 vclk16
-Z8 !s110 1606987388
+Z8 !s110 1607415537
 !i10b 1
 !s100 >Dh75_nmaNezRD59E3T540
 IZBDC@;iF=G?MPJCOmCSLb0
@@ -44,7 +44,7 @@ R4
 r1
 !s85 0
 31
-Z9 !s108 1606987388.000000
+Z9 !s108 1607415537.000000
 !s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/clk16.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/clk16.v|
 !i113 0
@@ -178,7 +178,7 @@ R9
 R6
 R7
 vppm_decoder
-R8
+Z10 !s110 1607415538
 !i10b 1
 !s100 hLIXdPlXO2b8NWP;1ROl03
 ILH2F0o46eSjZDf`APYMCd3
@@ -192,14 +192,14 @@ R4
 r1
 !s85 0
 31
-R9
+Z11 !s108 1607415538.000000
 !s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/ppm_decoder.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/ppm_decoder.v|
 !i113 0
 R6
 R7
 vsof_received
-R8
+R10
 !i10b 1
 !s100 9^Z2kFAWCER:_7nabz5aP3
 IgGzmXkc1=jfzGbbVb^dJ_1
@@ -213,7 +213,7 @@ R4
 r1
 !s85 0
 31
-R9
+R11
 !s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/sof_received.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/sof_received.v|
 !i113 0
@@ -227,16 +227,16 @@ IcFVz=NY3k<Io<Nb]7kVCN3
 R2
 R3
 w1606871778
-Z10 8D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_clk128.v
-Z11 FD:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_clk128.v
+Z12 8D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_clk128.v
+Z13 FD:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_clk128.v
 L0 2
 R4
 r1
 !s85 0
 31
 R5
-Z12 !s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_clk128.v|
-Z13 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_clk128.v|
+Z14 !s107 D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_clk128.v|
+Z15 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/vivado_project/IC_design/PPM_decoder/decoder_ppmV2/decoder_ppmV2.srcs/sources_1/new/tb_clk128.v|
 !i113 0
 R6
 R7
@@ -244,10 +244,10 @@ Ttb_clk128_opt
 !s110 1606871893
 VC][Mm59fXz=L5T8RBaJcT1
 04 9 4 work tb_clk128 fast 0
-Z14 o+acc
+Z16 o+acc
 R7
 ntb_clk128_opt
-Z15 OL;O;10.5;63
+Z17 OL;O;10.5;63
 R0
 vtb_clk16
 !s110 1606871719
@@ -257,16 +257,16 @@ I]lV65n0]cOJJ]F5`6obI?1
 R2
 R3
 w1606871496
-R10
-R11
+R12
+R13
 L0 2
 R4
 r1
 !s85 0
 31
 !s108 1606871719.000000
-R12
-R13
+R14
+R15
 !i113 0
 R6
 R7
@@ -274,13 +274,13 @@ Ttb_clk16_opt
 !s110 1606871283
 VUdf>X]z5;78<MZTJFf[Dg0
 04 8 4 work tb_clk16 fast 0
-R14
+R16
 R7
 ntb_clk16_opt
-R15
+R17
 R0
 vtb_databyte
-Z16 !s110 1606917771
+Z18 !s110 1606917771
 !i10b 1
 !s100 F<b192DB:YcEGV_=K<UJ=0
 IaiMWI>>T[U9boZUlb]lQJ1
@@ -301,16 +301,16 @@ r1
 R6
 R7
 Ttb_databyte_opt
-R16
+R18
 V_SC<:ZR3<7QTP;gJ1YmGl3
 04 11 4 work tb_databyte fast 0
-R14
+R16
 R7
 ntb_databyte_opt
-R15
+R17
 R0
 vtb_Datagen2bits
-Z17 !s110 1606915506
+Z19 !s110 1606915506
 !i10b 1
 !s100 c?<ZcL=^YR`ID;3RDnc2?1
 ICXg[3NhnEUUTSVfEXM@V@0
@@ -332,13 +332,13 @@ R6
 R7
 ntb_@datagen2bits
 Ttb_Datagen2bits_opt
-R17
+R19
 Vk;G3eI?L81`Q=]I9jjj@K2
 04 15 4 work tb_Datagen2bits fast 0
-R14
+R16
 R7
 ntb_@datagen2bits_opt
-R15
+R17
 R0
 vtb_decoderPPM
 R8
@@ -363,15 +363,15 @@ R6
 R7
 ntb_decoder@p@p@m
 Ttb_decoderPPM_opt
-R8
-VmWDE3R2Aib5>Wa6LUi7gK2
+R10
+VEXlO<iMk0nODaO8EE52B>0
 04 13 4 work tb_decoderPPM fast 0
-R14
+R16
 R7
 ntb_decoder@p@p@m_opt
-R15
+R17
 vtb_eofreceived
-Z18 !s110 1606911172
+Z20 !s110 1606911172
 !i10b 1
 !s100 d1U7Vch]RK0<A`J`3V`ZO1
 IiVQ1XfTG7g29JY]ziimS82
@@ -392,16 +392,16 @@ r1
 R6
 R7
 Ttb_eofreceived_opt
-R18
+R20
 VeT02<BCi^Xz`o1?eF>S5A1
 04 14 4 work tb_eofreceived fast 0
-R14
+R16
 R7
 ntb_eofreceived_opt
-R15
+R17
 R0
 vtb_sofreceived
-Z19 !s110 1606899501
+Z21 !s110 1606899501
 !i10b 1
 !s100 ^T4iW_NZbn>o03^97eTY80
 IP;<9`@zz1za4SeQmQT>GR3
@@ -422,11 +422,11 @@ r1
 R6
 R7
 Ttb_sofreceived_opt
-R19
+R21
 VO530lMRTVd38=6Bi4OHA43
 04 14 4 work tb_sofreceived fast 0
-R14
+R16
 R7
 ntb_sofreceived_opt
-R15
+R17
 R0

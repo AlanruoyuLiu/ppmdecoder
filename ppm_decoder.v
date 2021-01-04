@@ -29,7 +29,7 @@ data_byte u3 (.data_3bits_in(data_3bits_out), .clk16(clk_16_out), .rst_n(rst_n),
 data_den u4 (.onebyte_in(onebyte_out), .clk(clk), .rst_n(rst_n), .D_en(D_en));
 
 
-sof_received u5 (.Din(Din), .clk16(clk_16_out), .rst_n(rst_n), .sof_rcv_out(sof_rcv_out), .eof_rcv_in(eof_rcv_out), .cnt_sof(cnt_sof_out));
+sof_received u5 (.Din(Din), .clk16(clk_16_out), .rst_n(rst_n), .sof_rcv_out(sof_rcv_out), .eof_rcv_in(eof_rcv_out), .cnt_sof(cnt_sof_out), .clk(clk));
 
 data_fen u6 (.sof_rcv_in(sof_rcv_out), .clk(clk), .rst_n(rst_n), .F_en(F_en));
 
