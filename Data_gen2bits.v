@@ -1,7 +1,7 @@
 module Data_gen2bits (
-    clk16, rst_n, Din, state_in, data_3bits_out, finish2bits_out
+    clk16, rst_n, Din, state_in, data_3bits_out, finish2bits_out, clk
 );
-    input clk16, rst_n, Din, state_in;
+    input clk16, rst_n, Din, state_in, clk;
     output [2:0] data_3bits_out;
     output finish2bits_out;
 
@@ -18,15 +18,15 @@ module Data_gen2bits (
     wire data01;
     wire data10;
 
-    always @(posedge clk16 or negedge rst_n) begin
+    always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             cnt_2bits <= 3'b000;
-        end else if (state_in) begin
+        end else if (state_in && clk16) begin
             cnt_2bits <= cnt_2bits + 3'b001;
         end
     end
     
-    always @(posedge clk16 or negedge rst_n) begin
+    always @(posedge clk or negedge rst_n) begin
        if (!rst_n) begin
            Din_reg <= 1'b0;
        end else begin
@@ -38,26 +38,26 @@ module Data_gen2bits (
     assign data01 = Din_reg && (cnt_2bits == 3'b011);
     assign data10 = Din_reg && (cnt_2bits == 3'b101);
 
-    always @(posedge clk16 or negedge rst_n) begin
+    always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             shift_00 <= 6'd0;
-        end else begin
+        end else if (clk16) begin
             shift_00 <= {shift_00[4:0], data00};  // the highest bit was shift out every clock. New bit is input at the lowest bit.
         end
     end
 
-    always @(posedge clk16 or negedge rst_n) begin
+    always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             shift_01 <= 4'd0;
-        end else begin
+        end else if (clk16) begin
             shift_01 <= {shift_01[2:0], data01};  // the highest bit was shift out every clock. New bit is input at the lowest bit.
         end
     end
 
-    always @(posedge clk16 or negedge rst_n) begin
+    always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             shift_10 <= 2'd0;
-        end else begin
+        end else if (clk16) begin
             shift_10 <= {shift_10[0], data10};  // the highest bit was shift out every clock. New bit is input at the lowest bit.
         end
     end
