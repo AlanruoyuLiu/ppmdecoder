@@ -1,8 +1,8 @@
 module control_unit (
-    sof_rcv_in, eof_rcv_in, clk16, rst_n, dout_data, Dout, state, onebyte_in
+    sof_rcv_in, eof_rcv_in, rst_n, dout_data, Dout, state, onebyte_in, clk
 );
-    input sof_rcv_in, eof_rcv_in, onebyte_in;
-    input clk16, rst_n;
+    input sof_rcv_in, eof_rcv_in, onebyte_in, clk;
+    input rst_n;
     input [7:0] dout_data;
     
     output [7:0] Dout;
@@ -34,7 +34,7 @@ module control_unit (
     end
 
     //sequencial logic for changing state
-    always @(posedge clk16 or negedge rst_n) begin
+    always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             state <= sof_invalid;
         end else begin
