@@ -1,8 +1,8 @@
 module data_byte (
-    data_3bits_in, clk16, rst_n, finish2bits, dout_data, onebyte_out
+    data_3bits_in, clk16, rst_n, finish2bits, dout_data, onebyte_out, clk
 );
 
-    input [2:0] data_3bits_in;
+    input [2:0] data_3bits_in, clk;
     input clk16, rst_n, finish2bits;
 
     output [7:0] dout_data;
@@ -18,25 +18,25 @@ module data_byte (
     reg [1:0] q2;
     reg [1:0] q3;
 
-    always @(posedge clk16 or negedge rst_n) begin
+    always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             cnt_byte <= 3'b000;
-        end else if (finish2bits) begin
+        end else if (finish2bits && clk16) begin
             cnt_byte <= cnt_byte + 3'b001;            
-        end else if (cnt_byte == 3'b100) begin
+        end else if (cnt_byte == 3'b100 && clk16) begin
             cnt_byte <= 3'b000;
         end
     end
 
     assign onebyte_out = (cnt_byte == 3'b100);
 
-    always @(posedge clk16 or negedge rst_n) begin
+    always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             q0 <= 2'b00;
             q1 <= 2'b00;
             q2 <= 2'b00;
             q3 <= 2'b00;
-        end else if (finish2bits) begin
+        end else if (finish2bits && clk16) begin
             q0 <= data_3bits_in[1:0];
             q1 <= q0;
             q2 <= q1;

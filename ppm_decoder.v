@@ -24,7 +24,7 @@ clk16 u1 (.clk(clk), .rst_n(rst_n),.clk_16_out(clk_16_out));
 
 Data_gen2bits u2 (.clk16(clk_16_out), .rst_n(rst_n), .Din(Din), .state_in(state_out), .data_3bits_out(data_3bits_out), .finish2bits_out(finish2bits_out), .clk(clk));
 
-data_byte u3 (.data_3bits_in(data_3bits_out), .clk16(clk_16_out), .rst_n(rst_n), .finish2bits(finish2bits_out), .dout_data(dout_data_out), .onebyte_out(onebyte_out));
+data_byte u3 (.data_3bits_in(data_3bits_out), .clk16(clk_16_out), .rst_n(rst_n), .finish2bits(finish2bits_out), .dout_data(dout_data_out), .onebyte_out(onebyte_out), .clk(clk));
 
 data_den u4 (.onebyte_in(onebyte_out), .clk(clk), .rst_n(rst_n), .D_en(D_en));
 
