@@ -33,7 +33,7 @@ sof_received u5 (.Din(Din), .clk16(clk_16_out), .rst_n(rst_n), .sof_rcv_out(sof_
 
 data_fen u6 (.sof_rcv_in(sof_rcv_out), .clk(clk), .rst_n(rst_n), .F_en(F_en));
 
-eof_received u7 (.Din(Din), .clk16(clk_16_out), .rst_n(rst_n), .eof_rcv_out(eof_rcv_out), .cnt_sof_in(cnt_sof_out));
+eof_received u7 (.Din(Din), .clk16(clk_16_out), .rst_n(rst_n), .eof_rcv_out(eof_rcv_out), .cnt_sof_in(cnt_sof_out), .clk(clk));
 
 control_unit u8 (.sof_rcv_in(sof_rcv_out), .eof_rcv_in(eof_rcv_out), .clk16(clk_16_out), .rst_n(rst_n), .dout_data(dout_data_out), .Dout(Dout), .state(state_out), .onebyte_in(onebyte_out));
 

@@ -13,6 +13,7 @@ add wave -noupdate tb_decoderPPM/DUT/u1/first
 add wave -noupdate tb_decoderPPM/DUT/u1/cnt_16
 
 add wave -noupdate tb_decoderPPM/DUT/u2/cnt_2bits
+add wave -noupdate tb_decoderPPM/DUT/u2/Din_reg
 add wave -noupdate tb_decoderPPM/DUT/u2/shift_00
 add wave -noupdate tb_decoderPPM/DUT/u2/shift_01
 add wave -noupdate tb_decoderPPM/DUT/u2/shift_10
