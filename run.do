@@ -29,7 +29,6 @@ add wave -noupdate tb_decoderPPM/DUT/u3/onebyte_out
 add wave -noupdate tb_decoderPPM/DUT/u5/cnt_sof
 add wave -noupdate tb_decoderPPM/DUT/u5/start
 add wave -noupdate tb_decoderPPM/DUT/u5/eof_rcv_in
-add wave -noupdate tb_decoderPPM/DUT/u7/cnt_eof
 
 
 run 900000ms

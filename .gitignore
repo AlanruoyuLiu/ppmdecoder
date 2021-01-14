@@ -26,4 +26,8 @@ transcript*
 sc_dpiheader.h
 vsim.dbg
 
+<<<<<<< HEAD
 # End of https://www.toptal.com/developers/gitignore/api/modelsim
+=======
+# End of https://www.toptal.com/developers/gitignore/api/modelsim
+>>>>>>> 26a8205ad17e7ffb3159a808e496e421a14204a0
